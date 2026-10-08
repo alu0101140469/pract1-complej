@@ -1,0 +1,141 @@
+============================================================
+Traza de la palabra: ab
+============================================================
+Configuración inicial:
+  Estado: q1
+  Cadena restante: ab
+  Pila: S (cima -> fondo)
+  Transiciones posibles: T1 [q1 a S q1 A]
+
+Paso 1: T1 -> q1 a S q1 A
+  Estado: q1
+  Cadena restante: b
+  Pila: A (cima -> fondo)
+  Transiciones posibles: T3 [q1 b A q2 .]
+
+Paso 2: T3 -> q1 b A q2 .
+  Estado: q2
+  Cadena restante: epsilon
+  Pila: epsilon
+  Transiciones posibles: ninguna
+
+Resultado: PERTENECE (pila vacía y entrada consumida)
+
+============================================================
+Traza de la palabra: aabb
+============================================================
+Configuración inicial:
+  Estado: q1
+  Cadena restante: aabb
+  Pila: S (cima -> fondo)
+  Transiciones posibles: T1 [q1 a S q1 A]
+
+Paso 1: T1 -> q1 a S q1 A
+  Estado: q1
+  Cadena restante: abb
+  Pila: A (cima -> fondo)
+  Transiciones posibles: T2 [q1 a A q1 AA]
+
+Paso 2: T2 -> q1 a A q1 AA
+  Estado: q1
+  Cadena restante: bb
+  Pila: AA (cima -> fondo)
+  Transiciones posibles: T3 [q1 b A q2 .]
+
+Paso 3: T3 -> q1 b A q2 .
+  Estado: q2
+  Cadena restante: b
+  Pila: A (cima -> fondo)
+  Transiciones posibles: T4 [q2 b A q2 .]
+
+Paso 4: T4 -> q2 b A q2 .
+  Estado: q2
+  Cadena restante: epsilon
+  Pila: epsilon
+  Transiciones posibles: ninguna
+
+Resultado: PERTENECE (pila vacía y entrada consumida)
+
+============================================================
+Traza de la palabra: aaabbb
+============================================================
+Configuración inicial:
+  Estado: q1
+  Cadena restante: aaabbb
+  Pila: S (cima -> fondo)
+  Transiciones posibles: T1 [q1 a S q1 A]
+
+Paso 1: T1 -> q1 a S q1 A
+  Estado: q1
+  Cadena restante: aabbb
+  Pila: A (cima -> fondo)
+  Transiciones posibles: T2 [q1 a A q1 AA]
+
+Paso 2: T2 -> q1 a A q1 AA
+  Estado: q1
+  Cadena restante: abbb
+  Pila: AA (cima -> fondo)
+  Transiciones posibles: T2 [q1 a A q1 AA]
+
+Paso 3: T2 -> q1 a A q1 AA
+  Estado: q1
+  Cadena restante: bbb
+  Pila: AAA (cima -> fondo)
+  Transiciones posibles: T3 [q1 b A q2 .]
+
+Paso 4: T3 -> q1 b A q2 .
+  Estado: q2
+  Cadena restante: bb
+  Pila: AA (cima -> fondo)
+  Transiciones posibles: T4 [q2 b A q2 .]
+
+Paso 5: T4 -> q2 b A q2 .
+  Estado: q2
+  Cadena restante: b
+  Pila: A (cima -> fondo)
+  Transiciones posibles: T4 [q2 b A q2 .]
+
+Paso 6: T4 -> q2 b A q2 .
+  Estado: q2
+  Cadena restante: epsilon
+  Pila: epsilon
+  Transiciones posibles: ninguna
+
+Resultado: PERTENECE (pila vacía y entrada consumida)
+
+============================================================
+Traza de la palabra: aab
+============================================================
+Configuración inicial:
+  Estado: q1
+  Cadena restante: aab
+  Pila: S (cima -> fondo)
+  Transiciones posibles: T1 [q1 a S q1 A]
+
+No existe un camino aceptante para esta palabra.
+Resultado: NO PERTENECE
+
+============================================================
+Traza de la palabra: abb
+============================================================
+Configuración inicial:
+  Estado: q1
+  Cadena restante: abb
+  Pila: S (cima -> fondo)
+  Transiciones posibles: T1 [q1 a S q1 A]
+
+No existe un camino aceptante para esta palabra.
+Resultado: NO PERTENECE
+
+============================================================
+Traza de la palabra: ba
+============================================================
+Configuración inicial:
+  Estado: q1
+  Cadena restante: ba
+  Pila: S (cima -> fondo)
+  Transiciones posibles: ninguna
+
+No existe un camino aceptante para esta palabra.
+Resultado: NO PERTENECE
+

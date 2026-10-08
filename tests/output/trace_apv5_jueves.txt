@@ -1,0 +1,130 @@
+============================================================
+Traza de la palabra: AABBCCCC
+============================================================
+Configuración inicial:
+  Estado: p
+  Cadena restante: AABBCCCC
+  Pila: X (cima -> fondo)
+  Transiciones posibles: T1 [p A X p yX]
+
+Paso 1: T1 -> p A X p yX
+  Estado: p
+  Cadena restante: ABBCCCC
+  Pila: yX (cima -> fondo)
+  Transiciones posibles: T2 [p A y p yy]
+
+Paso 2: T2 -> p A y p yy
+  Estado: p
+  Cadena restante: BBCCCC
+  Pila: yyX (cima -> fondo)
+  Transiciones posibles: T3 [p B y q yy]
+
+Paso 3: T3 -> p B y q yy
+  Estado: q
+  Cadena restante: BCCCC
+  Pila: yyyX (cima -> fondo)
+  Transiciones posibles: T5 [q B y q yy]
+
+Paso 4: T5 -> q B y q yy
+  Estado: q
+  Cadena restante: CCCC
+  Pila: yyyyX (cima -> fondo)
+  Transiciones posibles: T6 [q C y r .]
+
+Paso 5: T6 -> q C y r .
+  Estado: r
+  Cadena restante: CCC
+  Pila: yyyX (cima -> fondo)
+  Transiciones posibles: T8 [r C y r .]
+
+Paso 6: T8 -> r C y r .
+  Estado: r
+  Cadena restante: CC
+  Pila: yyX (cima -> fondo)
+  Transiciones posibles: T8 [r C y r .]
+
+Paso 7: T8 -> r C y r .
+  Estado: r
+  Cadena restante: C
+  Pila: yX (cima -> fondo)
+  Transiciones posibles: T8 [r C y r .]
+
+Paso 8: T8 -> r C y r .
+  Estado: r
+  Cadena restante: epsilon
+  Pila: X (cima -> fondo)
+  Transiciones posibles: T9 [r . X r .]
+
+Paso 9: T9 -> r . X r .
+  Estado: r
+  Cadena restante: epsilon
+  Pila: epsilon
+  Transiciones posibles: ninguna
+
+Resultado: PERTENECE (pila vacía y entrada consumida)
+
+============================================================
+Traza de la palabra: AACC
+============================================================
+Configuración inicial:
+  Estado: p
+  Cadena restante: AACC
+  Pila: X (cima -> fondo)
+  Transiciones posibles: T1 [p A X p yX]
+
+No existe un camino aceptante para esta palabra.
+Resultado: NO PERTENECE
+
+============================================================
+Traza de la palabra: BBCC
+============================================================
+Configuración inicial:
+  Estado: p
+  Cadena restante: BBCC
+  Pila: X (cima -> fondo)
+  Transiciones posibles: T4 [p B X q yX]
+
+Paso 1: T4 -> p B X q yX
+  Estado: q
+  Cadena restante: BCC
+  Pila: yX (cima -> fondo)
+  Transiciones posibles: T5 [q B y q yy]
+
+Paso 2: T5 -> q B y q yy
+  Estado: q
+  Cadena restante: CC
+  Pila: yyX (cima -> fondo)
+  Transiciones posibles: T6 [q C y r .]
+
+Paso 3: T6 -> q C y r .
+  Estado: r
+  Cadena restante: C
+  Pila: yX (cima -> fondo)
+  Transiciones posibles: T8 [r C y r .]
+
+Paso 4: T8 -> r C y r .
+  Estado: r
+  Cadena restante: epsilon
+  Pila: X (cima -> fondo)
+  Transiciones posibles: T9 [r . X r .]
+
+Paso 5: T9 -> r . X r .
+  Estado: r
+  Cadena restante: epsilon
+  Pila: epsilon
+  Transiciones posibles: ninguna
+
+Resultado: PERTENECE (pila vacía y entrada consumida)
+
+============================================================
+Traza de la palabra: ABC
+============================================================
+Configuración inicial:
+  Estado: p
+  Cadena restante: ABC
+  Pila: X (cima -> fondo)
+  Transiciones posibles: T1 [p A X p yX]
+
+No existe un camino aceptante para esta palabra.
+Resultado: NO PERTENECE
+
